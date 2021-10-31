@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "dsiworld": {
+      "hosting": {
+        "dsi-bio": [
+          "dsibio"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "dsiworld"
+  }
+}
