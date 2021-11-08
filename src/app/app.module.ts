@@ -9,6 +9,8 @@ import { HomeComponent } from './home/home.component';
 import { DonateComponent } from './donate/donate.component';
 import { YarnComponent } from './yarn/yarn.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatRippleModule } from '@angular/material/core';
 
 @NgModule({
   declarations: [
@@ -18,13 +20,15 @@ import { NotFoundComponent } from './not-found/not-found.component';
     HomeComponent,
     DonateComponent,
     YarnComponent,
-    NotFoundComponent
+    NotFoundComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
+    MatRippleModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

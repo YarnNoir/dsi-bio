@@ -1,10 +1,49 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use "~@angular/material" as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$dsi-bio-primary: mat.define-palette(mat.$indigo-palette);
+$dsi-bio-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$dsi-bio-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$dsi-bio-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $dsi-bio-primary,
+      accent: $dsi-bio-accent,
+      warn: $dsi-bio-warn,
+    ),
+  )
+);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($dsi-bio-theme);
+
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 /* You can add global styles to this file, and also import other style files */
+body {
+  @apply overflow-x-hidden;
+}
 
 .main-bio {
-  @apply overflow-y-scroll overflow-x-hidden w-screen;
+  @apply w-screen relative;
 
   section {
     @apply pt-[5rem] md:pt-[4rem] lg:pt-6 px-[5vw] md:px-[10vw]
@@ -13,7 +52,7 @@
 }
 
 header {
-  @apply w-[30vw] md:w-[35vw] filter drop-shadow-md dark:drop-shadow-dark lg:w-[40vw];
+  @apply w-[30vw] md:w-[15vw] filter drop-shadow-md dark:drop-shadow-dark lg:w-[10vw];
 
   .cls-1 {
     @apply fill-current dark:text-gray-600 text-white;
@@ -22,21 +61,21 @@ header {
 
 nav {
   @apply dark:bg-gray-700 bg-white p-[.2em] rounded-full shadow-md dark:shadow-dark flex;
-  
+
   a {
-    @apply mx-[.25em] hover:bg-gray-200 dark:hover:bg-gray-500 p-3 rounded-full transition-all duration-500 ease-out;
-    
+    @apply mx-[.25em] hover:bg-gray-200 dark:hover:bg-gray-500 p-3 md:p-2 rounded-full transition-all duration-500 ease-out;
+
     img {
-      @apply filter invert-[.8] hover:invert-[.35] dark:invert dark:hover:invert-[.85] w-6;
+      @apply filter invert-[.8] hover:invert-[.35] dark:invert dark:hover:invert-[.85] w-6 md:w-4;
     }
-    
+
     &.active {
       @apply bg-gray-500 dark:bg-gray-200;
-      
+
       img {
         @apply dark:invert-0 invert;
       }
-    }  
+    }
   }
 }
 
@@ -48,17 +87,19 @@ events {
   @apply w-full bg-black;
 }
 
-app-home, app-donate, app-yarn {
+app-home,
+app-donate,
+app-yarn {
   @apply w-full;
 }
-  
-  .cards {
-    .card {
-      @apply w-full inline-block rounded-2xl min-h-[6rem] p-3 bg-white dark:bg-gray-800 shadow-md dark:shadow-dark dark:text-white relative overflow-hidden;
-    }
+
+.cards {
+  .card {
+    @apply w-full inline-block rounded-2xl min-h-[6rem] p-3 bg-white dark:bg-gray-800 shadow-md dark:shadow-dark dark:text-white relative overflow-hidden;
   }
-  
- span.ripple {
+}
+
+span.ripple {
   position: absolute; /* The absolute position we mentioned earlier */
   border-radius: 50%;
   transform: scale(0);
@@ -78,9 +119,17 @@ footer {
 }
 
 .in-bg {
-  @apply bg-trans-white dark:bg-trans-black w-screen h-screen absolute z-[-50] overflow-x-hidden overflow-y-hidden;
+  @apply bg-trans-white dark:bg-trans-black w-screen h-screen fixed z-[-50] overflow-hidden;
 }
 
 .bg-img {
-  @apply filter grayscale w-screen h-screen bg-fixed bg-center bg-cover bg-no-repeat absolute z-[-99];
+  @apply filter grayscale w-screen h-screen bg-fixed bg-center bg-cover bg-no-repeat fixed z-[-99] overflow-hidden;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
 }
