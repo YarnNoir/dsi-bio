@@ -1,15 +1,33 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  OnInit
+} from '@angular/core';
 
 @Component({
   selector: 'app-home',
   templateUrl: '../template/bio.template.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements OnInit {
-ColorRipple: string = "white";
-  constructor() { }
+export class HomeComponent implements OnInit, AfterViewInit {
+  ColorRipple: string = "white";
 
-  ngOnInit(): void {
+  constructor(private element: ElementRef) {}
+
+  ngOnInit(): void {}
+  
+  addRipple(event:any) {
+    console.log(event.currentTarget)
+    
+  }
+
+  ngAfterViewInit(): void {
+    console.log(this.element.nativeElement)
+
+    const doc = this.element.nativeElement
+
+    
   }
 
 }
