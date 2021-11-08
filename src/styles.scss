@@ -63,18 +63,26 @@ nav {
   @apply dark:bg-gray-700 bg-white p-[.2em] rounded-full shadow-md dark:shadow-dark flex;
 
   a {
-    @apply mx-[.25em] hover:bg-gray-200 dark:hover:bg-gray-500 p-3 md:p-2 rounded-full transition-all duration-500 ease-out;
+    @apply mx-[.25em] p-3 md:p-2 rounded-full transition-all duration-500 ease-out;
 
     img {
-      @apply filter invert-[.8] hover:invert-[.35] dark:invert dark:hover:invert-[.85] w-6 md:w-4;
+      @apply filter invert-[.4]  dark:invert  w-6 md:w-4;
+    }
+
+    &:hover {
+      @apply bg-gray-200 dark:bg-gray-500;
     }
 
     &.active {
-      @apply bg-gray-500 dark:bg-gray-200;
+      @apply bg-gray-500 dark:bg-white;
 
       img {
         @apply dark:invert-0 invert;
       }
+    }
+
+    .mat-ripple-element {
+      @apply bg-ripple-white dark:bg-ripple-black;
     }
   }
 }
@@ -96,6 +104,10 @@ app-yarn {
 .cards {
   .card {
     @apply w-full inline-block rounded-2xl min-h-[6rem] p-3 bg-white dark:bg-gray-800 shadow-md dark:shadow-dark dark:text-white relative overflow-hidden;
+
+    .mat-ripple-element {
+      @apply bg-ripple-black dark:bg-ripple-white;
+    }
   }
 }
 
