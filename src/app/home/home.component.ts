@@ -6,6 +6,7 @@ import { Component, ElementRef, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
+  cards?: any[] = [{ link: 'link', svgDiscord: true }, {}];
   constructor(private element: ElementRef) {}
 
   ngOnInit(): void {}
