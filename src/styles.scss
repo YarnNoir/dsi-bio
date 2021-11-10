@@ -91,10 +91,6 @@ events {
   @apply w-full rounded-2xl min-h-[9rem] p-3 bg-white dark:bg-gray-800 shadow-md dark:shadow-dark dark:text-white;
 }
 
-.router {
-  @apply w-full bg-black;
-}
-
 app-home,
 app-donate,
 app-yarn {
@@ -103,7 +99,19 @@ app-yarn {
 
 .cards {
   .card {
-    @apply w-full inline-block rounded-2xl min-h-[6rem] p-3 bg-white dark:bg-gray-800 shadow-md dark:shadow-dark dark:text-white relative overflow-hidden;
+    @apply w-full flex rounded-2xl min-h-[6rem] p-3 bg-white dark:bg-gray-800 shadow-md dark:shadow-dark dark:text-white relative overflow-hidden my-2;
+    
+    svg, img {
+      @apply h-[5.25rem] mx-auto;
+      
+      .discord {
+        @apply fill-current text-white;
+      }
+    }
+    
+    span {
+      @apply inline-block m-auto;
+    }
 
     .mat-ripple-element {
       @apply bg-ripple-black dark:bg-ripple-white;
