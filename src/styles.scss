@@ -108,6 +108,12 @@ events {
       .saweria {
         @apply fill-current dark:text-white text-saweria-yellow;
       }
+      .twitter {
+        @apply fill-current dark:text-white text-twitter-blue;
+      }
+      .youtube {
+        @apply fill-current dark:text-white text-youtube-red;
+      }
     }
 
     span {

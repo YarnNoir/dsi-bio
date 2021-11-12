@@ -20,6 +20,8 @@ module.exports = {
         "discord-blurple": "#5865F2",
         "trakteer-red": "#BF202F",
         "saweria-yellow": "#EFA02E",
+        "twitter-blue": "#1D9BF0",
+        "youtube-red": "#EE3124",
       },
       boxShadow: {
         dark: "0 4px 6px -1px rgba(255, 255, 255, 0.3), 0 2px 4px -1px rgba(255, 255, 255, 0.4)",
