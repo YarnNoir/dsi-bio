@@ -91,26 +91,27 @@ events {
   @apply w-full rounded-2xl min-h-[9rem] p-3 bg-white dark:bg-gray-800 shadow-md dark:shadow-dark dark:text-white;
 }
 
-app-home,
-app-donate,
-app-yarn {
-  @apply w-full;
-}
-
 .cards {
   .card {
-    @apply w-full flex rounded-2xl min-h-[6rem] p-3 bg-white dark:bg-gray-800 shadow-md dark:shadow-dark dark:text-white relative overflow-hidden my-2;
-    
-    svg, img {
-      @apply h-[5.25rem] mx-auto;
-      
+    @apply w-full flex rounded-2xl min-h-[4rem] p-3 bg-white dark:bg-gray-800 shadow-md dark:shadow-dark dark:text-white relative overflow-hidden my-2;
+
+    svg,
+    img {
+      @apply h-[4rem] mx-auto;
+
       .discord {
-        @apply fill-current text-white;
+        @apply fill-current dark:text-white text-discord-blurple;
+      }
+      .trakteer {
+        @apply fill-current dark:text-white text-trakteer-red;
+      }
+      .saweria {
+        @apply fill-current dark:text-white text-saweria-yellow;
       }
     }
-    
+
     span {
-      @apply inline-block m-auto;
+      @apply inline-block m-auto text-lg;
     }
 
     .mat-ripple-element {

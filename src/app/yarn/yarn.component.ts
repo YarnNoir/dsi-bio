@@ -2,14 +2,14 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-yarn',
-  templateUrl: './yarn.component.html',
-  styleUrls: ['./yarn.component.scss']
+  templateUrl: '../template/bio.template.html',
 })
 export class YarnComponent implements OnInit {
+  cards?: any[] = [
+    { link: 'link', svg: 'discord', name: 'discord official' },
+    {},
+  ];
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }
