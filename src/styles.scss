@@ -54,7 +54,7 @@ body {
 header {
   @apply w-[30vw] md:w-[15vw] filter drop-shadow-md dark:drop-shadow-dark lg:w-[10vw];
 
-  .cls-1 {
+  .logo {
     @apply fill-current dark:text-gray-600 text-white;
   }
 }

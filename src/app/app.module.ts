@@ -12,6 +12,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatRippleModule } from '@angular/material/core';
 import { ImagesComponent } from './images/images.component';
+import { LogoComponent } from './logo/logo.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { ImagesComponent } from './images/images.component';
     YarnComponent,
     NotFoundComponent,
     ImagesComponent,
+    LogoComponent,
   ],
   imports: [
     BrowserModule,
