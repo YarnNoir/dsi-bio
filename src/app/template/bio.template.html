@@ -1,6 +1,6 @@
 <div class="cards" *ngIf="cards">
   <div *ngFor="let card of cards">
-    <a matRipple class="card" [href]="card.link || '#'">
+    <a matRipple class="card" [href]="card.link || '#'" target="_blank">
       <app-images [svg]="card.svg" [pic]="card.pic"></app-images>
       <span>{{card.name || 'Cards'}}</span>
     </a>

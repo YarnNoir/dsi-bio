@@ -6,8 +6,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class YarnComponent implements OnInit {
   cards?: any[] = [
-    { link: 'link', svg: 'youtube', name: 'discord official' },
-    { svg: 'twitter'},
+    {
+      link: 'https://youtube.com/channel/UCR6SWzQ-xgl9VV-W1iJtgFQ',
+      svg: 'youtube',
+      name: 'Youtube',
+    },
+    {
+      svg: 'twitter',
+      name: 'Twitter',
+      link: 'https://twitter.com/yarndinasti',
+    },
   ];
   constructor() {}
 

@@ -8,7 +8,7 @@ module.exports = {
   purge: {
     content: ["./src/**/*.{html,ts,css,scss,sass,less,styl}"],
   },
-  darkMode: "class",
+  darkMode: "media",
   // or 'media' or 'class'
   theme: {
     extend: {

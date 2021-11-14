@@ -6,8 +6,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DonateComponent implements OnInit {
   cards?: any[] = [
-    { link: 'link', svg: 'trakteer', name: 'discord official' },
-    { svg: 'saweria' },
+    { link: 'https://trakteer.id/yarn', svg: 'trakteer', name: 'Trakteer' },
+    { svg: 'saweria', name: 'Saweria', link: 'https://saweria.co/yarn' },
   ];
   constructor() {}
 

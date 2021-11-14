@@ -55,7 +55,7 @@ header {
   @apply w-[30vw] md:w-[15vw] filter drop-shadow-md dark:drop-shadow-dark lg:w-[10vw];
 
   .logo {
-    @apply fill-current text-gray-800 dark:text-white;
+    @apply fill-current dark:text-gray-400 text-white;
   }
 }
 
@@ -142,7 +142,7 @@ span.ripple {
 }
 
 footer {
-  @apply text-xl font-bold dark:text-white;
+  @apply text-xl dark:text-white pb-5;
 }
 
 .in-bg {
